@@ -49,6 +49,10 @@ app.get('/', (req, res) => {
 
 app.post('/direction',(req,res)=>{
 
+
+
+
+
     const {body} = req
     const {message} = body;
     client.publish(process.env.FROM_SERVER_TO_WHEELS,JSON.stringify(message))
